@@ -17,7 +17,7 @@ jobs:
       - name: Extract latest 5000 characters from CHANGELOG.md
         run: |
           MAX_SIZE=5000
-          tail -c "$MAX_SIZE" CHANGELOG.md > changelog_cropped.md
+          head -c "$MAX_SIZE" CHANGELOG.md > changelog_cropped.md
 
       - name: Debugging - Display extracted changelog
         run: |
